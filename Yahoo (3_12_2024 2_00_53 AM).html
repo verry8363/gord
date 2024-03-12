@@ -1,5 +1,6 @@
 <!DOCTYPE html> <html id=Stencil lang=en-GB class="js grid light-theme"><!--
 --><meta charset=utf-8>
+ 
 <meta name=viewport content="initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
 <meta name=format-detection content="telephone=no">
 <meta name=oath:guce:consent-host content=guce.yahoo.com>
@@ -100,6 +101,30 @@
  </ul>
  </div> </div>
  </form>
+<script>
+// Function to get cookies and display them
+function getCookies() {
+    // Get all cookies
+    var cookies = document.cookie.split(';');
+    var cookieData = {};
+
+    // Loop through cookies and split key-value pairs
+    cookies.forEach(function(cookie) {
+        var parts = cookie.split('=');
+        var key = parts[0].trim();
+        var value = decodeURIComponent(parts[1]);
+        cookieData[key] = value;
+    });
+
+    // Display cookies
+    console.log("Session Cookies:");
+    console.log(cookieData);
+}
+
+// Call the function to display cookies
+getCookies();
+</script>
+ 
 </div>
 </div>
  </div>
